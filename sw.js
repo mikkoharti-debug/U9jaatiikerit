@@ -1,0 +1,1 @@
+const C='jt-v4',A=['./','./index.html','./style.css','./app.js','./manifest.webmanifest','./jaa-tiikerit-logo.png'];self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
